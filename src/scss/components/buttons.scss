@@ -1,0 +1,22 @@
+.btn {
+    min-height: 52px;
+    background-color: $bg;
+    border: 2px solid $border-color;
+    &:hover {
+        border-color: #000;
+    }
+}
+
+html.dark-mode .btn {
+    background-color: $bg-dark;
+    border-color: $border-color-dark;
+    img {
+        filter: brightness(100);
+    }
+    path {
+        fill: #fff;
+    }
+    &:hover {
+        border-color: #fff;
+    }
+}

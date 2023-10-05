@@ -1,0 +1,47 @@
+.weather-condition-card {
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 120px;
+    padding: 16px 20px;
+    // border: 1px solid $border-color;
+    border-radius: 8px;
+    overflow: hidden;
+    img,
+    svg {
+        width: 48px;
+        height: auto;
+        margin-right: 25px;
+    }
+    h3 {
+        color: rgb(100, 116, 139);
+        margin-bottom: 8px;
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+    p {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: 1100px) {
+        flex-direction: column;
+        img {
+            margin: 0 0 5px 0;
+        }
+    }
+}
+
+html.dark-mode .weather-condition-card {
+    background-color: $bg-dark;
+    h3 {
+        color: #94a3b8;
+    }
+    p {
+        color: #fff;
+    }
+    img {
+        filter: brightness(100);
+    }
+}

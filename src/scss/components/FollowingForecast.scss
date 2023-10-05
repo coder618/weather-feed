@@ -1,0 +1,50 @@
+.following-forecast {
+    background-color: $bg;
+    padding: 16px 20px;
+
+    border-radius: 8px;
+    .item {
+        margin: 14px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .temp {
+            line-height: 1.2;
+            font-weight: 600;
+            color: #3c465dfa;
+            font-size: 16px;
+        }
+        .title {
+            span {
+                display: block;
+            }
+            span:last-of-type {
+                color: $black;
+                font-size: 16px;
+            }
+            span:first-of-type {
+                font-size: 14px;
+                line-height: 1.2;
+                font-weight: 400;
+                margin-bottom: 6px;
+                color: #64748b;
+            }
+        }
+    }
+}
+
+html.dark-mode .following-forecast {
+    background-color: $bg-dark;
+
+    .title {
+        span:last-of-type {
+            color: #fff;
+        }
+        span:first-of-type {
+            color: rgb(148, 163, 184);
+        }
+    }
+    .temp {
+        color: rgb(148, 163, 184);
+    }
+}

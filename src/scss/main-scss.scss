@@ -1,0 +1,162 @@
+@import "./variable.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./components/top-bar.scss";
+@import "./components/buttons.scss";
+@import "./components/main-card.scss";
+@import "./components/top-card.scss";
+@import "./components/FollowingForecast.scss";
+@import "./components/following-days-forecast";
+@import "./components/footer.scss";
+@import "./components/section-1.scss";
+
+body {
+    background-color: #f6f6f6;
+}
+#root {
+    border-radius: 15px;
+    background-color: #fff;
+    // min-width: 1200px;
+    max-width: 1200px;
+    min-height: 95vh;
+    display: block;
+    margin: 20px auto;
+    padding: 40px 60px;
+
+    @media only screen and (max-width: 994px) {
+        padding: 40px 20px;
+    }
+}
+
+h2,
+h1 {
+    font-weight: 400;
+    margin: 40px 0;
+    font-size: 30px;
+}
+
+.following-days-forecast {
+}
+
+.branding {
+    text-decoration: none;
+    display: flex;
+    min-height: 52px;
+    border: 1px solid #111;
+    padding: 0 15px;
+    background-color: $bg;
+
+    justify-content: center;
+    color: #111;
+    font-weight: 500;
+    align-items: center;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease;
+    span {
+        padding-left: 10px;
+    }
+    &:hover {
+        border-color: #111;
+        background-color: #111;
+        color: #fff;
+        path {
+            fill: #fff;
+        }
+    }
+}
+
+// dark
+html.dark-mode {
+    body {
+        background-color: #111;
+    }
+    #root {
+        background-color: #0f172a;
+    }
+    h2,
+    h1 {
+        color: #fff;
+    }
+
+    .branding {
+        background-color: $bg-dark;
+        color: #fff;
+        border-color: $border-color-dark;
+        path {
+            fill: #fff;
+        }
+    }
+}
+
+.c-alert {
+    background-color: $bg;
+    border-color: $border-color;
+    color: #111;
+}
+html.dark-mode .c-alert {
+    background-color: $bg-dark;
+    // border-color: $border-color-dark;
+    border: 0;
+    color: #fff;
+}
+
+.api-error-message-component,
+.loading-component {
+    background: rgba(0, 0, 0, 0.03);
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 2px dashed rgba(0, 0, 0, 0.07);
+    .icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 32px;
+        background-color: rgba(96, 128, 160, 0.25);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: rgba(96, 128, 160, 0.6);
+    }
+    h3 {
+        color: rgb(44 49 57);
+        font-size: 20px;
+        margin-top: 40px;
+        text-align: center;
+    }
+    p {
+        color: rgb(96, 128, 150);
+        font-size: 15px;
+    }
+    .img-wrapper {
+        background-color: #e4e4e4;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 50px;
+            height: auto;
+        }
+    }
+}
+html.dark-mode .api-error-message-component,
+html.dark-mode .loading-component {
+    background-color: $bg-dark;
+    p,
+    h3 {
+        color: #fff;
+    }
+
+    .img-wrapper {
+        background: #2d3e5a;
+        img {
+            filter: invert(0.85);
+        }
+    }
+}
