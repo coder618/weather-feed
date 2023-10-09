@@ -67,6 +67,7 @@ function App() {
                     setForecastData(data.ForecastWeatherData);
                     setIsLoading(false);
                     setMessage(data.message);
+                    setApiErrorMessage(false);
                 } else {
                     setMessage("");
                     setApiErrorMessage(data.message);
